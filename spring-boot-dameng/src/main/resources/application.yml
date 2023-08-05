@@ -1,0 +1,22 @@
+server:
+  port: 8100
+
+
+spring:
+  datasource:
+    # 设置非SYSDBA数据库，需要设置schema
+    url: jdbc:dm://127.0.0.1:5236?schema=TEST01
+    username: TEST01
+    password: 123456789
+    driver-class-name: dm.jdbc.driver.DmDriver
+
+
+logging:
+  level:
+    root: info
+    cn.tcode.mapper: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id
